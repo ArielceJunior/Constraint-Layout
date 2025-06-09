@@ -11,7 +11,8 @@ import com.example.constrictlayout.R;
 public class MainActivity extends AppCompatActivity {
 
     private Button buttonBlogPost;
-
+    private Button buttonSeries;
+    private Button buttonText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +24,20 @@ public class MainActivity extends AppCompatActivity {
                     BlogPostActivity.class);
 
             startActivity(intentBlogPost);
+        });
+        buttonSeries = findViewById(R.id.buttonCL2);
+        buttonSeries.setOnClickListener(v -> {
+            Intent intentSeries = new Intent(getApplicationContext(),
+                    SeriesActivity.class);
+
+            startActivity(intentSeries);
+        });
+        buttonText = findViewById(R.id.buttonCL3);
+        buttonText.setOnClickListener(v -> {
+            Intent intentText = new Intent(getApplicationContext(),
+                    TextActivity.class);
+
+            startActivity(intentText);
         });
     }
 }

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#454545"
+    tools:context="br.edu.ifsuldeminas.mch.constraintlayouts.SeriesActivity">
+
+
+    <ImageView
+        android:id="@+id/imageCover"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="220dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/serie1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/seriesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:drawablePadding="8dp"
+        android:text="Friends"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconPlay"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="72dp"
+        android:contentDescription="Play"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <ImageView
+        android:id="@+id/iconMirror"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="107dp"
+        android:contentDescription="Mirror"
+        android:src="@android:drawable/ic_menu_set_as"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toEndOf="@+id/iconPlay"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <ImageView
+        android:id="@+id/iconRotate"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="72dp"
+        android:contentDescription="Assistir"
+        android:scaleX="-1"
+        android:src="@android:drawable/ic_menu_rotate"
+        app:layout_constraintEnd_toStartOf="@+id/iconPlay"
+        app:layout_constraintHorizontal_bias="0.415"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="232dp"
+        android:progress="30"
+        android:progressTint="#FF0000"
+        android:thumbTint="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageCover" />
+
+    <TextView
+        android:id="@+id/episodeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="T10:E08"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seriesTitle"
+        tools:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/iconPlay2"
+        android:layout_width="21dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="195dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Play"
+        android:src="@android:drawable/arrow_down_float"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seriesTitle" />
+
+    <TextView
+        android:id="@+id/textTime1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="28dp"
+        android:text="20:00"
+        android:textColor="#DBDBDB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/textTime2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="17dp"
+        android:text="40:00"
+        android:textColor="#DBDBDB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/seekBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

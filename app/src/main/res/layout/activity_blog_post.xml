@@ -1,12 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BlogPostActivity">
+    tools:context="br.edu.ifsuldeminas.mch.constraintlayouts.BlogPostActivity">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/imageHeader"
+            android:layout_width="421dp"
+            android:layout_height="257dp"
+            android:layout_marginStart="-5dp"
+            android:layout_marginTop="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/androids"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/postTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Utilizando imagens no Android"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageHeader" />
+
+
+        <TextView
+            android:id="@+id/postDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08 de Junho de 2025"
+            android:padding="16dp"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/postTitle" />
+
+
+        <TextView
+            android:id="@+id/postAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="292dp"
+            android:text="Arielce Junior"
+            android:padding="16dp"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/postTitle" />
+
+        <TextView
+            android:id="@+id/postContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:lineSpacingExtra="6dp"
+            android:text="Este é o conteúdo do post. Ele pode ser bem longo e ocupar mais do que uma tEste é o conteúdo do post. Ele pode ser bem longo e ocupar mais do que uma tela inteira...Este é o conteúdo do post. Ele pode ser bem longo e ocupar mais do que uma tela inteira...Este é o conteúdo do post. Ele pode ser bem longo e ocupar mais do que uma tela inteira...Este é o conteúdo do post. Ele pode ser bem longo e ocupar mais do que uma tela inteira...Este é o conteúdo do post. Ele pode ser bem longo e ocupar mais do que uma tela inteira...Este é o conteúdo do post. Ele pode ser bem longo e ocupar mais do que uma tela inteira...Este é o conteúdo do post. Ele pode ser bem longo e ocupar mais do que uma tela inteira...Este é o conteúdo do post. Ele pode ser bem longo e ocupar mais do que uma tela inteira...Este é o conteúdo do post. Ele pode ser bem longo e ocupar mais do que uma tela inteira...Este é o conteúdo do post. Ele pode ser bem longo e ocupar mais do que uma tela inteira...Este é o conteúdo do post. Ele pode ser bem longo e ocupar mais do que uma tela inteira...ela inteira..."
+            android:padding="16dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/postDate" />
+
+        <Button
+            android:id="@+id/buttonPrevius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="152dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="50dp"
+            android:text="Anterior"
+            app:layout_constraintEnd_toStartOf="@+id/buttonNext"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/postContent" />
+
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Próximo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/postContent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

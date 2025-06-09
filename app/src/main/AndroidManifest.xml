@@ -12,13 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ConstraintLayouts"
         tools:targetApi="31">
-
         <activity
-            android:name=".BlogPostActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".MainActivity"
+            android:name="br.edu.ifsuldeminas.mch.constraintlayouts.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +21,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="br.edu.ifsuldeminas.mch.constraintlayouts.BlogPostActivity">
+        </activity>
+
+        <activity
+            android:name="br.edu.ifsuldeminas.mch.constraintlayouts.SeriesActivity"
+            android:theme="@style/Theme.ConstraintLayouts.Netflix">
+        </activity>
+
+        <activity
+            android:name="br.edu.ifsuldeminas.mch.constraintlayouts.TextActivity">
+        </activity>
+
     </application>
 
 </manifest>
